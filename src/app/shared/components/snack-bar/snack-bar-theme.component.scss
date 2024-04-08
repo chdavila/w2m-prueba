@@ -1,0 +1,49 @@
+@use '@angular/material' as mat;
+
+@mixin _appli-banner-color($color) {
+    .mdc-snackbar__surface {
+        background-color: mat.get-color-from-palette($color, 600);
+    }
+
+    .mdc-snackbar__label {
+        color: mat.get-color-from-palette($color, 600-contrast);
+    }
+
+    button.close-btn.mat-mdc-snack-bar-action {
+        color: mat.get-color-from-palette($color, 600-contrast);
+    }
+}
+
+@mixin color($color-config) {
+    $theme-green: mat.define-palette(mat.$green-palette);
+    $warn-color: mat.get-color-from-palette($color-config, warn);
+
+    .custom-snackbar.custom-snackbar--success {
+        @include _appli-banner-color($theme-green);
+    }
+
+    .custom-snackbar.custom-snackbar--error {
+        @include _appli-banner-color($warn-color);
+    }
+}
+
+@mixin typography($typography-config) {
+    .custom-snackbar {
+        .text {
+            @include mat.typography-level($typography-config, headline-6)
+        }
+    }
+}
+
+@mixin theme($theme-config) {
+    $color-config: mat.get-color-config($theme-config);
+    $typography-config: mat.get-typography-config($theme-config);
+
+    @if $color-config !=null {
+        @include color($color-config);
+    }
+
+    @if $typography-config !=null {
+        @include typography($typography-config);
+    }
+}

@@ -1,0 +1,26 @@
+:host {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+
+  mat-card-content {
+    padding: 1rem;
+
+    h5 {
+      max-width: 200px;
+      height: 2rem;
+      overflow: hidden;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  mat-card-actions {
+    button:first-child {
+      margin-right: 0.5rem;
+    }
+  }
+}

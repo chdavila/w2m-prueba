@@ -1,0 +1,76 @@
+<div>
+    <img
+        [src]="urlUnsplash"
+        alt="SuperHero-img"
+    >
+</div>
+
+<div class="form-container">
+    <h4 class="mat-headline-4">Actualizar Heroe</h4>
+
+    <form [formGroup]="form" (ngSubmit)="handleSubmit()">
+        <div>
+            <!-- <label>Superheroe</label> -->
+            <mat-label>Nombre superheroe</mat-label>
+            <mat-form-field appearance="outline" color="primary">
+                <input formControlName="superhero" matInput placeholder="Batman...">
+                @if(superHeroCtrl.hasError('required')) {
+                    <mat-error>Campo es requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-label>Personaje</mat-label>
+            <mat-form-field appearance="outline" color="primary">
+                <input formControlName="characters" matInput placeholder="Bruce Wayne...">
+                @if(charactersCtrl.hasError('required')) {
+                    <mat-error>Campo es requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-label>Alter ego</mat-label>
+            <mat-form-field appearance="outline" color="primary">
+                <input formControlName="alter_ego" matInput placeholder="Bruce Wayne...">
+                @if(alter_egoCtrl.hasError('required')) {
+                    <mat-error>Campo es requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-label>Primera apareición</mat-label>
+            <mat-form-field appearance="outline" color="primary">
+                <input formControlName="first_appearance" matInput placeholder="Batman vs Superman cap 2">
+                @if(first_appearanceCtrl.hasError('required')) {
+                    <mat-error>Campo es requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-radio-group formControlName="publisher" color="primary" aria-label="Select an option">
+                <mat-radio-button [value]="publisherEnum.dcPublisher">DC Comics</mat-radio-button>
+                <mat-radio-button [value]="publisherEnum.marvelPublisher">Marvel Comics</mat-radio-button>
+              </mat-radio-group>
+        </div>
+
+        <div>
+            <input hidden type="file" class="file-upload" onchange="console.log(event.target.files)">
+
+        </div>
+
+        <div class="form-actions">
+            <button
+                mat-flat-button
+                color="primary"
+                type="submit"
+                [disabled]="form.invalid"
+            >
+                Actualizar
+            </button>
+        </div>
+    </form>
+</div>

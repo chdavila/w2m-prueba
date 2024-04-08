@@ -1,0 +1,12 @@
+<div>
+    <h2 mat-dialog-title>{{data.title}}</h2>
+    <mat-dialog-content>
+      <p>{{data.subtitle}}</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        @if(data.hasErrorBtn) {
+            <button mat-stroked-button color="warn" (click)="close()">{{data.errorLobel}}</button>
+        }
+      <button mat-flat-button color="primary" (click)="handleSuccess()">{{data.successLabel}}</button>
+    </mat-dialog-actions>
+  </div>

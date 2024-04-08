@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+
+.mat-headline-4 {
+  margin-bottom: 1rem;
+}
+
+.form-container {
+    width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .form-actions {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+div {
+  max-width: 500px;
+  img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    object-position: center;
+    object-fit: fill;
+    aspect-ratio: 5 / 8;
+  }
+}

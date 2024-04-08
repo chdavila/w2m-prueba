@@ -1,0 +1,19 @@
+<div class="left">
+    <p class="mat-headline-4">Searching</p>
+
+    <mat-form-field appearance="outline" color="primary">
+        <input [formControl]="ctrlSearch" matInput placeholder="Batman...">
+    </mat-form-field>
+</div>
+<div class="right">
+    <p class="mat-headline-4">Results</p>
+    @if(heroesFilter.length !== 0) {
+        @for (hero of heroesFilter; track $index) {
+            <w2m-card-hero [hero]="hero" />
+        }
+    } @else {
+        @for (hero of heroes; track $index) {
+            <w2m-card-hero [hero]="hero" />
+        }
+    } 
+</div>

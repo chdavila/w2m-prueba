@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+
+$brand-green-palette: (
+    50: #f9fbe7,
+    100: #f0f4c3,
+    200: #e5ee9c,
+    300: #dbe775,
+    400: #d3e157,
+    500: #ccdc39,
+    600: #bfca33,
+    700: #aeb42b,
+    800: #aeb42b,
+    900: #817717,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    )
+);
+
+$brand-purple-palette: (
+    50: #f0f0f0,
+    100: #d8d9d9,
+    200: #bbc1c3,
+    300: #9ca8ae,
+    400: #85959c,
+    500: #6d838c,
+    600: #61747b,
+    700: #525f65,
+    800: #434c50,
+    900: #313739,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    )
+)

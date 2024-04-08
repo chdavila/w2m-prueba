@@ -1,0 +1,10 @@
+<div>
+  <h2 mat-dialog-title>Modal de confirmación</h2>
+  <mat-dialog-content>
+    <p>Estas seguro que quieres eliminar a {{data.name}}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-stroked-button color="warn" (click)="close(false)">No</button>
+    <button mat-flat-button color="primary" (click)="close(true)">Confirmar</button>
+  </mat-dialog-actions>
+</div>

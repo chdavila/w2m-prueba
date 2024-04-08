@@ -1,0 +1,7 @@
+@use './assets/styles/index.scss';
+@use '@angular/material' as mat;
+@use './assets/styles/03-material/themes/light-theme';
+@import '@angular/cdk/overlay-prebuilt.css';
+
+@include mat.core();
+@include light-theme.apply-theme();

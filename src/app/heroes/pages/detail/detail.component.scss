@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.mat-headline-4 {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-position: center;
+  object-fit: contain;
+}

@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  h4 {
+    margin: 0 auto 1.5rem;
+    text-align: center;
+  }
+
+  .tab-body { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}

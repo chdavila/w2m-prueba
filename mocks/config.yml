@@ -1,0 +1,39 @@
+- request:
+    method: GET
+    url: ^/heroes/dc$
+  response:
+    - status: 200
+      latency: 2000
+      file: api/GET_200_dc_heroes.json
+
+- request:
+    method: GET
+    url: ^/heroes/marvel$
+  response:
+    - status: 200
+      latency: 1000
+      file: api/GET_200_marvel_heroes.json
+
+- request:
+    method: PATCH
+    url: ^/heroes$
+  response:
+    - status: 200
+      latency: 1000
+      file: api/GET_200_marvel_heroes.json
+
+- request:
+    method: POST
+    url: ^/heroes$
+  response:
+    - status: 200
+      latency: 1000
+      file: api/GET_200_marvel_heroes.json
+
+- request:
+    method: DELETE
+    url: ^/heroes$
+  response:
+    - status: 200
+      latency: 1000
+      file: api/GET_200_marvel_heroes.json

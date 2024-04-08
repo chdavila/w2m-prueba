@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  align-items: start;
+  gap: 2rem
+}
+
+.mat-headline-4 {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-position: center;
+  object-fit: contain;
+}
+
+.form-container {
+    width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .form-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

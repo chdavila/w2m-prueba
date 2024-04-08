@@ -1,0 +1,20 @@
+:host {
+  display: block;
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  picture {
+    display: flex;
+    img {
+      width: 70px;
+      height: 35px;
+      aspect-ratio: 10/5;
+    }
+  }
+
+  a {
+    margin-right: 1rem;
+  }
+}
